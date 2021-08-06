@@ -1,7 +1,7 @@
 # gitstorage
 
 [![CodeFactor](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage/badge)](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage) <a href='https://github.com/jpoles1/gopherbadger' target='_blank'>![gopherbadger-tag-do-not-edit](https://img.shields.io/badge/Go%20Coverage-85%25-brightgreen.svg?longCache=true&style=flat)</a>
-[https://img.shields.io/github/go-mod/go-version/data-master-platform/go-gitstorage]
+[https://img.shields.io/github/go-mod/go-version/data-master-platform/go-gitstorage](https://img.shields.io/github/go-mod/go-version/data-master-platform/go-gitstorage)
 
 Simple wrapper around [go-git](https://github.com/go-git/go-git) which allows you to easily use git in an easy way to store data similar as on Amazon S3 (different interface though).
 
