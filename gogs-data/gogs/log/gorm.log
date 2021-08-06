@@ -1,0 +1,32 @@
+2021/08/06 14:52:05 gogs.io/gogs/internal/db/users.go:93
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 14:52:05 gogs.io/gogs/internal/db/users.go:93 record not found
+[4.733ms] [rows:0] SELECT * FROM "user" WHERE lower_name = 'username' ORDER BY "user"."id" LIMIT 1
+2021/08/06 14:52:17 gogs.io/gogs/internal/db/users.go:93 record not found
+[0.622ms] [rows:0] SELECT * FROM "user" WHERE lower_name = 'gogs' ORDER BY "user"."id" LIMIT 1
+2021/08/06 14:53:58 gogs.io/gogs/internal/db/users.go:93 record not found
+[0.412ms] [rows:0] SELECT * FROM "user" WHERE lower_name = 'bjorn' ORDER BY "user"."id" LIMIT 1
+2021/08/06 14:53:58 gogs.io/gogs/internal/db/access_tokens.go:140 record not found
+[5.814ms] [rows:0] SELECT * FROM "access_token" WHERE sha1 = 'bjorn' ORDER BY "access_token"."id" LIMIT 1
+2021/08/06 17:16:00 gogs.io/gogs/internal/db/db.go:137
+[error] failed to initialize database, got error failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:01 gogs.io/gogs/internal/db/db.go:137
+[error] failed to initialize database, got error failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:02 gogs.io/gogs/internal/db/db.go:137
+[error] failed to initialize database, got error failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:04 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[103.215ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 17:16:09 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 17:17:56 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 17:25:28 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 17:26:10 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 17:26:49 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[106.597ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 17:26:57 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 17:36:49 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[119.443ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'

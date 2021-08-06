@@ -1,0 +1,29 @@
+2021/08/06 14:51:56 [ INFO] Gogs 0.13.0+dev
+2021/08/06 14:51:56 [ INFO] Git config user.name set to Gogs
+2021/08/06 14:51:56 [ INFO] Git config user.email set to gogs@fake.local
+2021/08/06 14:51:56 [ INFO] Run mode: Production
+2021/08/06 14:51:56 [ INFO] First-time run install finished!
+2021/08/06 17:16:00 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:16:00 [FATAL] [...o/gogs/internal/route/install.go:75 GlobalInit()] Failed to initialize ORM engine: open database: failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:01 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:16:01 [FATAL] [...o/gogs/internal/route/install.go:75 GlobalInit()] Failed to initialize ORM engine: open database: failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:02 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:16:02 [FATAL] [...o/gogs/internal/route/install.go:75 GlobalInit()] Failed to initialize ORM engine: open database: failed to connect to `host=postgres user=username database=gogs`: dial error (dial tcp 172.21.0.2:5432: connect: connection refused)
+2021/08/06 17:16:03 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:16:04 [ INFO] Run mode: Production
+2021/08/06 17:16:05 [ INFO] Listen on http://0.0.0.0:3000
+2021/08/06 17:17:48 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:17:49 [ INFO] Run mode: Production
+2021/08/06 17:17:49 [ INFO] Listen on http://0.0.0.0:3000
+2021/08/06 17:25:19 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:25:20 [ INFO] Run mode: Production
+2021/08/06 17:25:20 [ INFO] Listen on http://0.0.0.0:3000
+2021/08/06 17:26:02 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:26:02 [ INFO] Run mode: Production
+2021/08/06 17:26:03 [ INFO] Listen on http://0.0.0.0:3000
+2021/08/06 17:26:49 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:26:49 [ INFO] Run mode: Production
+2021/08/06 17:26:50 [ INFO] Listen on http://0.0.0.0:3000
+2021/08/06 17:36:48 [ INFO] Gogs 0.13.0+dev
+2021/08/06 17:36:49 [ INFO] Run mode: Production
+2021/08/06 17:36:50 [ INFO] Listen on http://0.0.0.0:3000

@@ -1,0 +1,49 @@
+version: '2'
+services:
+    test:
+      build:
+        context: .
+        dockerfile: Dockerfile.test
+      container_name: test
+      depends_on:
+        - gogs
+      command: make test-all
+    postgres:
+      image: postgres:9.5
+      container_name: postgres
+      restart: always
+      environment:
+       - "POSTGRES_USER=username"
+       - "POSTGRES_PASSWORD=password"
+       - "POSTGRES_DB=gogs"
+      volumes:
+       - "./db-data:/var/lib/postgresql/data"
+      networks:
+       - gogs
+    gogs:
+      image: gogs/gogs:latest
+      container_name: gogs
+      restart: always
+      ports:
+       - "10022:22"
+       - "3000:3000"
+      links:
+       - postgres
+      environment:
+       - "RUN_CROND=true"
+      networks:
+       - gogs
+      volumes:
+       - "./gogs-data:/data"
+      depends_on:
+       - postgres
+       
+networks:
+    gogs:
+      driver: bridge
+
+volumes:
+    db-data:
+      driver: local
+    gogs-data:
+      driver: local
