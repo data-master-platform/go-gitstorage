@@ -25,6 +25,43 @@ func TestIntegrationNew(t *testing.T) {
 	cl = New(username, password, repo, branch)
 }
 
+func TestIntegrationCreate_AssertNoPath(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping integration test")
+	}
+	err := cl.Create("", testDataFile)
+
+	assert.Error(t, err)
+}
+
+func TestIntegrationUpdate_AssertNoPath(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping integration test")
+	}
+	err := cl.Update("", testDataFile)
+
+	assert.Error(t, err)
+}
+
+func TestIntegrationDelete_AssertNoPath(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping integration test")
+	}
+	err := cl.Delete("")
+
+	assert.Error(t, err)
+}
+
+func TestIntegrationRead_AssertNoPath(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping integration test")
+	}
+	str, err := cl.Read("")
+
+	assert.Error(t, err)
+	assert.Equal(t, "", str)
+}
+
 func TestIntegrationCreate(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping integration test")

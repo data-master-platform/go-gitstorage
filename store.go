@@ -48,7 +48,6 @@ func (c *Client) commit() (string, error) {
 		Email: "gogs@gogs.com",
 	}
 	hash, err := c.Worktree.Commit("commit", &git.CommitOptions{Author: &s})
-
 	if err != nil {
 		return "", errors.Wrap(err, "unable to commit")
 	}
