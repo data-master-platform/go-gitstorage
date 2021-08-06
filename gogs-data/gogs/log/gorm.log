@@ -30,3 +30,25 @@
 [warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
 2021/08/06 17:36:49 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
 [119.443ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:29:26 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[107.999ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:30:46 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[130.796ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:32:12 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[148.918ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:33:33 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[179.918ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:34:49 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[102.034ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:35:07 gogs.io/gogs/internal/db/users.go:93
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 19:35:30 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[108.715ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:47:12 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 19:50:21 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/06 19:51:25 gorm.io/driver/postgres@v1.0.5/migrator.go:158 SLOW SQL >= 100ms
+[114.013ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema =  CURRENT_SCHEMA() AND table_name = 'access' AND table_type = 'BASE TABLE'
+2021/08/06 19:51:28 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)

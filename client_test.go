@@ -18,7 +18,7 @@ var testFileName = "file.txt"
 var testDataFile = "hello"
 var testDataFileUpdated = "hello world"
 
-func TestNew(t *testing.T) {
+func TestIntegrationNew(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping integration test")
 	}

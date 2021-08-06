@@ -5,8 +5,7 @@ test-in-docker:
 
 .PHONY: test-all
 test-all:
-	$(MAKE) test && \
-	$(MAKE) integration-test
+	go test ./... -v -coverprofile=coverage/coverage.out -covermode=atomic
 
 .PHONY: test
 test:

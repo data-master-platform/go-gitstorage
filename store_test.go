@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIntegrationNew(t *testing.T) {
+func TestIntegrationgetHead(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping integration test")
 	}

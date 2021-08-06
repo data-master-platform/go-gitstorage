@@ -8,6 +8,8 @@ services:
       depends_on:
         - gogs
       command: make test-all
+      volumes:
+        - "./coverage:${PWD}"
     postgres:
       image: postgres:9.5
       container_name: postgres
