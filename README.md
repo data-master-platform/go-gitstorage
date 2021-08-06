@@ -1,5 +1,8 @@
 # gitstorage
 
+[![CodeFactor](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage/badge)](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage)
+
+
 Simple wrapper around [go-git](https://github.com/go-git/go-git) which allows you to easily use git in an easy way to store data similar as on Amazon S3 (different interface though).
 
 ## Usage
