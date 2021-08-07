@@ -1,6 +1,6 @@
 # gitstorage
 
-[![CodeFactor](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage/badge)](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage) <a href='https://github.com/jpoles1/gopherbadger' target='_blank'>![gopherbadger-tag-do-not-edit](https://img.shields.io/badge/Go%20Coverage-85%25-brightgreen.svg?longCache=true&style=flat)</a>
+[![CodeFactor](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage/badge)](https://www.codefactor.io/repository/github/data-master-platform/go-gitstorage) <a href='https://github.com/jpoles1/gopherbadger' target='_blank'>![gopherbadger-tag-do-not-edit](https://img.shields.io/badge/Go%20Coverage-87%25-brightgreen.svg?longCache=true&style=flat)</a>
 [![Shields](https://img.shields.io/github/go-mod/go-version/data-master-platform/go-gitstorage)](https://img.shields.io/github/go-mod/go-version/data-master-platform/go-gitstorage) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=code_smells)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
