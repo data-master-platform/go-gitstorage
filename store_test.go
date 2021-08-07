@@ -141,4 +141,8 @@ func TestIntegrationPushSecond(t *testing.T) {
 	}
 	err := cl.push(fileName)
 	assert.NoError(t, err)
+
+	str, err := cl.get(fileName)
+	assert.Error(t, err)
+	assert.Empty(t, str)
 }
