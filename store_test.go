@@ -11,33 +11,33 @@ var testData = `{"namespace":"example.avro","type":"record","name":"User","field
 
 func TestIntegrationgetHead(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	s, err := cl.getHead()
 	assert.NoError(t, err)
 	assert.Greater(t, len(s), 5)
 }
 
-func TestIntegrationPush_AssertNothingToPush(t *testing.T) {
+func TestIntegrationPushAssertNothingToPush(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.push(fileName)
 	assert.Error(t, err)
 }
 
-func TestIntegrationGet_AssertFailNoFile(t *testing.T) {
+func TestIntegrationGetAssertFailNoFile(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	str, err := cl.get(fileName)
 	assert.Error(t, err)
 	assert.Equal(t, "", str)
 }
 
-func TestIntegrationAddFail_AssertNothingToAdd(t *testing.T) {
+func TestIntegrationAddFailAssertNothingToAdd(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	h, err := cl.add(fileName)
 	assert.Error(t, err)
@@ -46,23 +46,23 @@ func TestIntegrationAddFail_AssertNothingToAdd(t *testing.T) {
 
 func TestIntegrationCreateFile(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.createFile(fileName, testData)
 	assert.NoError(t, err)
 }
 
-func TestIntegrationCreateFile_AssertPathEmpty(t *testing.T) {
+func TestIntegrationCreateFileAssertPathEmpty(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.createFile("", "")
 	assert.Error(t, err)
 }
 
-func TestIntegrationCreateFile_AssertPathIncorrect(t *testing.T) {
+func TestIntegrationCreateFileAssertPathIncorrect(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.createFile("./", "")
 	assert.Error(t, err)
@@ -70,7 +70,7 @@ func TestIntegrationCreateFile_AssertPathIncorrect(t *testing.T) {
 
 func TestIntegrationAdd(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	h, err := cl.add(fileName)
 	assert.NoError(t, err)
@@ -79,7 +79,7 @@ func TestIntegrationAdd(t *testing.T) {
 
 func TestIntegrationCommit(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	h, err := cl.commit()
 	assert.NoError(t, err)
@@ -88,7 +88,7 @@ func TestIntegrationCommit(t *testing.T) {
 
 func TestIntegrationPush(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.push(fileName)
 	assert.NoError(t, err)
@@ -96,7 +96,7 @@ func TestIntegrationPush(t *testing.T) {
 
 func TestIntegrationGet(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	str, err := cl.get(fileName)
 	assert.NoError(t, err)
@@ -105,7 +105,7 @@ func TestIntegrationGet(t *testing.T) {
 
 func TestIntegrationDeleteFile(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.deleteFile(fileName)
 	assert.NoError(t, err)
@@ -113,7 +113,7 @@ func TestIntegrationDeleteFile(t *testing.T) {
 
 func TestIntegrationAddSecond(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	h, err := cl.add(fileName)
 	assert.NoError(t, err)
@@ -122,7 +122,7 @@ func TestIntegrationAddSecond(t *testing.T) {
 
 func TestIntegrationCommitSecond(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	h, err := cl.commit()
 	assert.NoError(t, err)
@@ -131,7 +131,7 @@ func TestIntegrationCommitSecond(t *testing.T) {
 
 func TestIntegrationPushSecond(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.push(fileName)
 	assert.NoError(t, err)

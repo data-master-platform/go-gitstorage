@@ -87,23 +87,7 @@ func (c *Client) Read(name string) (string, error) {
 }
 
 func (c *Client) Update(name string, data string) error {
-	err := c.createFile(name, data)
-	if err != nil {
-		return err
-	}
-	_, err = c.add(name)
-	if err != nil {
-		return err
-	}
-	_, err = c.commit()
-	if err != nil {
-		return err
-	}
-	err = c.push(name)
-	if err != nil {
-		return err
-	}
-	return nil
+	return c.Create(name, data)
 }
 
 func (c *Client) Delete(name string) error {

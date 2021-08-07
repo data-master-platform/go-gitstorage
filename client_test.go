@@ -11,6 +11,8 @@ const (
 	branch   = "refs/heads/master"
 	username = "gogs"
 	password = "admin"
+
+	msgSkipTest = "skipping integration test"
 )
 
 var cl Abstractor
@@ -20,41 +22,41 @@ var testDataFileUpdated = "hello world"
 
 func TestIntegrationNew(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	cl = New(username, password, repo, branch)
 }
 
-func TestIntegrationCreate_AssertNoPath(t *testing.T) {
+func TestIntegrationCreateAssertNoPath(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Create("", testDataFile)
 
 	assert.Error(t, err)
 }
 
-func TestIntegrationUpdate_AssertNoPath(t *testing.T) {
+func TestIntegrationUpdateAssertNoPath(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Update("", testDataFile)
 
 	assert.Error(t, err)
 }
 
-func TestIntegrationDelete_AssertNoPath(t *testing.T) {
+func TestIntegrationDeleteAssertNoPath(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Delete("")
 
 	assert.Error(t, err)
 }
 
-func TestIntegrationRead_AssertNoPath(t *testing.T) {
+func TestIntegrationReadAssertNoPath(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	str, err := cl.Read("")
 
@@ -64,7 +66,7 @@ func TestIntegrationRead_AssertNoPath(t *testing.T) {
 
 func TestIntegrationCreate(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Create(testFileName, testDataFile)
 
@@ -73,7 +75,7 @@ func TestIntegrationCreate(t *testing.T) {
 
 func TestIntegrationUpdate(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Update(testFileName, testDataFileUpdated)
 
@@ -82,7 +84,7 @@ func TestIntegrationUpdate(t *testing.T) {
 
 func TestIntegrationRead(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	str, err := cl.Read(testFileName)
 
@@ -92,7 +94,7 @@ func TestIntegrationRead(t *testing.T) {
 
 func TestIntegrationDelete(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping integration test")
+		t.Skip(msgSkipTest)
 	}
 	err := cl.Delete(testFileName)
 

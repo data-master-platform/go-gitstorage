@@ -1,0 +1,6 @@
+projectKey=personal
+serverUrl=http://docker.for.mac.localhost:9000
+serverVersion=8.2.0.32929
+dashboardUrl=http://docker.for.mac.localhost:9000/dashboard?id=personal
+ceTaskId=AXsfKfv259FI6K1AI40d
+ceTaskUrl=http://docker.for.mac.localhost:9000/api/ce/task?id=AXsfKfv259FI6K1AI40d
