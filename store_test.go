@@ -68,22 +68,26 @@ func TestIntegrationCreateFileAssertPathIncorrect(t *testing.T) {
 	assert.Error(t, err)
 }
 
+var hashAdd = ""
+
 func TestIntegrationAdd(t *testing.T) {
 	if testing.Short() {
 		t.Skip(msgSkipTest)
 	}
-	h, err := cl.add(fileName)
+	hashAdd, err := cl.add(fileName)
 	assert.NoError(t, err)
-	assert.Greater(t, len(h), 5)
+	assert.Greater(t, len(hashAdd), 5)
 }
+
+var hashCommit = ""
 
 func TestIntegrationCommit(t *testing.T) {
 	if testing.Short() {
 		t.Skip(msgSkipTest)
 	}
-	h, err := cl.commit()
+	hashCommit, err := cl.commit()
 	assert.NoError(t, err)
-	assert.Greater(t, len(h), 5)
+	assert.Greater(t, len(hashCommit), 5)
 }
 
 func TestIntegrationPush(t *testing.T) {
@@ -117,6 +121,7 @@ func TestIntegrationAddSecond(t *testing.T) {
 	}
 	h, err := cl.add(fileName)
 	assert.NoError(t, err)
+	assert.NotEqual(t, hashAdd, h)
 	assert.Greater(t, len(h), 5)
 }
 
@@ -127,6 +132,7 @@ func TestIntegrationCommitSecond(t *testing.T) {
 	h, err := cl.commit()
 	assert.NoError(t, err)
 	assert.Greater(t, len(h), 5)
+	assert.NotEqual(t, hashCommit, h)
 }
 
 func TestIntegrationPushSecond(t *testing.T) {
