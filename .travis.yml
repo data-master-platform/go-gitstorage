@@ -8,4 +8,4 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-- make test-in-docker
+  - make test-in-docker
