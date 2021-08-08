@@ -10,18 +10,6 @@ services:
       command: make test-all
       volumes:
         - "./coverage:${PWD}"
-    postgres:
-      image: postgres:9.5
-      container_name: postgres
-      restart: always
-      environment:
-       - "POSTGRES_USER=username"
-       - "POSTGRES_PASSWORD=password"
-       - "POSTGRES_DB=gogs"
-      volumes:
-       - "./db-data:/var/lib/postgresql/data"
-      networks:
-       - gogs
     gogs:
       image: gogs/gogs:latest
       container_name: gogs
@@ -29,16 +17,12 @@ services:
       ports:
        - "10022:22"
        - "3000:3000"
-      links:
-       - postgres
       environment:
        - "RUN_CROND=true"
       networks:
        - gogs
       volumes:
        - "./gogs-data:/data"
-      depends_on:
-       - postgres
 
 networks:
     gogs:
