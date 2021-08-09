@@ -1,29 +1,31 @@
 version: '2'
 services:
-    test:
-      build:
-        context: .
-        dockerfile: Dockerfile.test
-      container_name: test
-      depends_on:
-        - gogs
-      command: make test-all
-      entrypoint: ./wait-for-gogs.sh
-      volumes:
-        - "./coverage:${PWD}"
-    gogs:
-      image: gogs/gogs:latest
-      container_name: gogs
-      restart: always
-      ports:
-       - "10022:22"
-       - "3000:3000"
-      environment:
-       - "RUN_CROND=true"
-      networks:
-       - gogs
-      volumes:
-       - "./gogs-data:/data"
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    container_name: test
+    depends_on:
+      - gogs
+    command: make test-all
+    entrypoint: ./wait-for-gogs.sh
+    volumes:
+      - "./coverage:${PWD}"
+    links:
+      - gogs
+  gogs:
+    image: gogs/gogs:latest
+    container_name: gogs
+    restart: always
+    ports:
+      - "10022:22"
+      - "3000:3000"
+    environment:
+      - "RUN_CROND=true"
+    networks:
+      - gogs
+    volumes:
+      - "./gogs-data:/data"
 
 networks:
     gogs:
