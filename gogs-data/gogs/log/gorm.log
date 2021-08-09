@@ -10,3 +10,5 @@
 [warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
 2021/08/09 11:16:53 gogs.io/gogs/internal/db/users.go:321
 [warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/08/09 11:20:49 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
