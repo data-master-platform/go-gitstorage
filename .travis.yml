@@ -1,4 +1,12 @@
 
+language: go
+
+go:
+  - 1.16.x
+
+git:
+  depth: 1
+
 before_install:
   - docker version
   - docker-compose version
