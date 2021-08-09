@@ -27,3 +27,4 @@ script:
 
 after_failure:
   - docker ps -s
+  - docker logs -f test
