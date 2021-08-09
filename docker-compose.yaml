@@ -8,6 +8,7 @@ services:
       depends_on:
         - gogs
       command: make test-all
+      entrypoint: ./wait-for-gogs.sh
       volumes:
         - "./coverage:${PWD}"
     gogs:
