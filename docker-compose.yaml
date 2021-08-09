@@ -5,14 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile.test
     container_name: test
-    depends_on:
-      - gogs
     command: make test-all
     entrypoint: ./wait-for-gogs.sh
     volumes:
       - "./coverage:${PWD}"
-    links:
-      - gogs
   gogs:
     image: gogs/gogs:latest
     container_name: gogs
