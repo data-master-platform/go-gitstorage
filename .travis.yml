@@ -19,12 +19,11 @@ before_install:
   - docker-compose version
 
 before_script:
-  - docker-compose up -d --build
+  - docker-compose up -d --build gogs
 
 script:
   - ./wait-for-gogs.sh
-  - docker-compose exec test make test-all
+  - docker-compose run test
 
 after_failure:
-  - docker ps -s
   - docker logs -f test
