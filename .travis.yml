@@ -16,4 +16,4 @@ before_script:
 
 script:
   - ./wait-for-gogs.sh
-  - go test ./... -v -coverprofile=coverage/coverage.out -covermode=atomic
+  - make test-in-docker
