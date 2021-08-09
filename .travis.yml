@@ -8,4 +8,4 @@ before_script:
 
 script:
   - ./wait-for-gogs.sh
-  - docker-compose up --build --abort-on-container-exit test
+  - make test-all
