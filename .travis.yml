@@ -22,7 +22,7 @@ before_script:
   - docker-compose up -d --build gogs
 
 script:
-  - docker-compose up --build test
+  - make test-all
 
 after_failure:
   - docker logs -f test
