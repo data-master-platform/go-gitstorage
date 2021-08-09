@@ -19,10 +19,10 @@ before_install:
   - docker-compose version
 
 before_script:
-  - docker-compose up -d --build gogs
+  - docker-compose up -d --build
 
 script:
-  - make test-all
+  - docker-compose run test
 
 after_failure:
   - docker logs -f test
