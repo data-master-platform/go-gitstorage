@@ -5,7 +5,7 @@ test-in-docker:
 
 .PHONY: test-all
 test-all:
-	go test ./... -v -coverprofile=coverage/coverage.out -covermode=atomic
+	go test ./... -v -coverprofile=coverage.txt -covermode=atomic
 
 .PHONY: test
 test:
