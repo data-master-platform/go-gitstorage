@@ -8,4 +8,4 @@ before_script:
 
 script:
   - ./wait-for-gogs.sh
-  - make test-all
+  - go test ./... -v -coverprofile=coverage/coverage.out -covermode=atomic
