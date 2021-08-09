@@ -1,4 +1,4 @@
-module github.com/data-master-platform/gitstorage
+module github.com/data-master-platform/go-gitstorage
 
 go 1.16
 
