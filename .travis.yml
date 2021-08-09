@@ -7,4 +7,4 @@ before_script:
   - docker-compose up -d --build gogs
 
 script:
-  - make test-all
+  - docker-compose up --build --abort-on-container-exit test
