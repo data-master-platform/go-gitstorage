@@ -5,6 +5,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=data-master-platform_go-gitstorage&metric=security_rating)](https://sonarcloud.io/dashboard?id=data-master-platform_go-gitstorage)
+[![Build Status](https://travis-ci.com/data-master-platform/go-gitstorage.svg?branch=main)](https://travis-ci.com/data-master-platform/go-gitstorage)
 
 Simple wrapper around [go-git](https://github.com/go-git/go-git) which allows you to easily apply _CRUD_ operations in a similar way as pushing data in a blob fashion.
 
