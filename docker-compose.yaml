@@ -28,9 +28,9 @@ services:
       - "./gogs-data:/data"
 
 networks:
-    gogs:
-      driver: bridge
+  gogs:
+    driver: bridge
 
 volumes:
-    gogs-data:
-      driver: local
+  gogs-data:
+    driver: local
