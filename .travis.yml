@@ -2,8 +2,9 @@
 before_install:
   - docker version
   - docker-compose version
+
 before_script:
-  - docker-compose up --build --abort-on-container-exit gogs
+  - docker-compose up -d --build --abort-on-container-exit gogs
 
 script:
   - make test-all
