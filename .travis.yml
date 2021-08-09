@@ -1,18 +1,18 @@
 
-dist: bionic
+# dist: bionic
 
-language: go
+# language: go
 
-go:
-  - 1.16.x
+# go:
+#   - 1.16.x
 
-git:
-  depth: 1
+# git:
+#   depth: 1
 
-install: true
+# install: true
 
-notifications:
-  email: false
+# notifications:
+#   email: false
 
 before_install:
   - docker version
@@ -22,7 +22,6 @@ before_script:
   - docker-compose up -d --build gogs
 
 script:
-  - ./wait-for-gogs.sh
   - docker-compose up --build test
 
 after_failure:
