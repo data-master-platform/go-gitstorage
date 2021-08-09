@@ -7,7 +7,7 @@ services:
     container_name: test
     command: make test-all
     volumes:
-      - "./coverage:${PWD}"
+      - "./:${PWD}"
     networks:
       - gogs
     depends_on:
