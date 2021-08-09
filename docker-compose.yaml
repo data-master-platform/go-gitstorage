@@ -8,6 +8,8 @@ services:
     command: make test-all
     volumes:
       - "./coverage:${PWD}"
+    networks:
+      - gogs
   gogs:
     image: gogs/gogs:latest
     container_name: gogs

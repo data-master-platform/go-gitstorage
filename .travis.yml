@@ -23,7 +23,7 @@ before_script:
 
 script:
   - ./wait-for-gogs.sh
-  - docker-compose exec test make-test
+  - docker-compose exec test make test-all
 
 after_failure:
   - docker ps -s
