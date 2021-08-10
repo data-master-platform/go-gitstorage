@@ -42,6 +42,12 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	}
+        list, err := cl.List()
+        // print list of all files
+        log.Println(list)
+	if err != nil {
+		log.Println(err)
+	}
 	err = cl.Update(testFileName, testDataFileUpdated)
 	if err != nil {
 		log.Println(err)
