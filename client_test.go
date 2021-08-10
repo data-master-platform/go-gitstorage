@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	repo     = "http://localhost:3000/gogs/db-storage"
+	repo     = "http://gogs:3000/gogs/db-storage"
 	branch   = "refs/heads/master"
 	username = "gogs"
 	password = "admin"
