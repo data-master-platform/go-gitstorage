@@ -18,6 +18,21 @@ func (c *Client) getHead() (string, error) {
 	return pb.Hash().String(), nil
 }
 
+func (c *Client) objects() ([]string, error) {
+	var visited = []string{}
+	err := c.FileTreeReader.Walk(func(filepath string, isDir bool, err error) error {
+		if !isDir {
+			visited = append(visited, filepath)
+		}
+		return nil
+	})
+	if err != nil {
+		return []string{}, err
+	}
+
+	return visited, nil
+}
+
 func (c *Client) createFile(path, data string) error {
 	newFile, err := c.Filesystem.Create(path)
 	if err != nil {

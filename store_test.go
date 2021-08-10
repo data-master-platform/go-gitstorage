@@ -98,6 +98,16 @@ func TestIntegrationPush(t *testing.T) {
 	assert.NoError(t, err)
 }
 
+func TestIntegrationObjects(t *testing.T) {
+	if testing.Short() {
+		t.Skip(msgSkipTest)
+	}
+	str, err := cl.objects()
+
+	assert.NoError(t, err)
+	assert.Greater(t, len(str), 1)
+}
+
 func TestIntegrationGet(t *testing.T) {
 	if testing.Short() {
 		t.Skip(msgSkipTest)

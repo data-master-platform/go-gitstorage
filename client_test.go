@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	repo     = "http://gogs:3000/gogs/db-storage"
+	repo     = "http://localhost:3000/gogs/db-storage"
 	branch   = "refs/heads/master"
 	username = "gogs"
 	password = "admin"
@@ -70,6 +70,23 @@ func TestIntegrationCreate(t *testing.T) {
 	}
 	err := cl.Create(testFileName, testDataFile)
 
+	assert.NoError(t, err)
+}
+
+func TestIntegrationList(t *testing.T) {
+	if testing.Short() {
+		t.Skip(msgSkipTest)
+	}
+	str, err := cl.List()
+
+	var present = false
+	for _, v := range str {
+		if v == "/"+testFileName {
+			present = true
+		}
+	}
+
+	assert.True(t, present)
 	assert.NoError(t, err)
 }
 
