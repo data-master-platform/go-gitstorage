@@ -14,4 +14,5 @@ after_failure:
 
 after_success:
   - ls -alh
+  - docker-compose exec -it test ls -alh
   - bash <(curl -s https://codecov.io/bash)
